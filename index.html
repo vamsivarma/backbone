@@ -26,6 +26,12 @@
 				//Compile a template using underscore
 				var template = _.template($("#user_template").html(), {});
 				this.$el.html(template);
+			},
+			events: {
+				"click #add_user": "addUser"
+			},
+			addUser: function() {
+				alert($('#user_input').val() + " has been added");
 			}
 		}); 
 		
